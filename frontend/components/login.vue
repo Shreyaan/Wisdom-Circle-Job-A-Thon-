@@ -57,8 +57,8 @@ function login() {
   };
 
   // validate email and password
-
-  if (!regex.test(email.value)) {
+  let emailValue = email.value;
+  if (!regex.test(emailValue)) {
     emailErrorClasses.value = "text-red-500 border-red-500";
     errorMessage.value.type = "email";
     errorMessage.value.message =
