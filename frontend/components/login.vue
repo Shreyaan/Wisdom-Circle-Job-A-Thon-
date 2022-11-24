@@ -5,6 +5,7 @@ const props = defineProps({
   tokens: Object,
 });
 
+// to validate email / mobile number
 const regex = /^(?:\d{10}|\w+@\w+\.\w{2,3})$/gm;
 
 // to toggle between login and register
@@ -73,7 +74,7 @@ function login() {
   }
 
   axios
-    .post("http://localhost:3001/api/auth/login", bodyParameters, config)
+    .post("https://wisdom-circle-job-a-thon-production.up.railway.app/api/auth/login", bodyParameters, config)
     .then((res) => {
       props.tokens.value = JSON.stringify(res.data);
       success.value = true;

@@ -59,7 +59,7 @@ function register() {
   }
 
   axios
-    .post("http://localhost:3001/api/auth/register", bodyParameters, config)
+    .post("https://wisdom-circle-job-a-thon-production.up.railway.app/api/auth/register", bodyParameters, config)
     .then((res) => {
       props.tokens.value = JSON.stringify(res.data);
       success.value = true;

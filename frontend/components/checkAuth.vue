@@ -16,7 +16,7 @@ function checkAuth() {
   const bodyParameters = {};
 
   axios
-    .get("http://localhost:3001/api/checkauth", config, bodyParameters)
+    .get("https://wisdom-circle-job-a-thon-production.up.railway.app/api/checkauth", config, bodyParameters)
     .then((res) => {
       response.value = (res);
     })
