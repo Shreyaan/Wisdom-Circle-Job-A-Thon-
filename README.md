@@ -77,7 +77,7 @@ npm run preview
 #### Register
 
 ```http
-  POST api/auth/register
+POST api/auth/register
 ```
 
 | Required form fields | Type     | Description                |
@@ -91,7 +91,7 @@ npm run preview
 
 
 ```http
-  POST api/auth/login
+POST api/auth/login
 ```
 
 | Required form fields | Type     | Description                |
@@ -104,19 +104,20 @@ npm run preview
 
 
 ```http
-  GET api/checkauth
+GET api/checkauth
 ```
 Checks auth status of user
 
 | Required headers| Type     | format                |
 | :-------- | :------- | :------------------------- |
-| `Authorization` | `string` | Bearer <accessToken>}|
+| `Authorization` | `string` | Bearer accessToken|
 
 
 #### other
 
-
+```http
 GET api/auth/refresh_token
+```
 
 gets new accessToken from the refresh token sent in cookie
 
